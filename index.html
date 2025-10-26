@@ -1,83 +1,60 @@
 <!DOCTYPE html>
-<html lang="en"">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Personal Portfolio Page" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open Sans" />
-        <link href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap" rel="stylesheet"/>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css" />
-        <title>Nincito's Portfolio</title>
+        <title>Nicolás Serrano García Page</title>
     </head>
     <body>
-        <nav id="navbar">
-            <div class="logo-container">
-                <a href="http://127.0.0.1:3000/Portfolio Page/index.html">
-                    <img alt="me" loading="lazy" src="Decoration photos\Foto orla.jpg" width="40"/>
-                </a>
-                <a href="http://127.0.0.1:3000/Portfolio Page/index.html">
-                    <h1>nincito</h1>
-                </a>
+        <div id = "wrapper-base">
+            <div id = "wrapper-main-body">
+                <div id = "wrapper-photo">
+                    <img class = "rounded" src="./Nicolas.jpg" alt = "Nicolas"/>
+                </div>
+                <div id = "wrapper-name">
+                    <h1>NICOLAS SERRANO</h1>
+                </div>
+                <hr>
+                <div id = "wrapper-about-me">
+                    <div id = "about-me-1" class = "paragraph">
+                        Hey, I'm Nico! I am a computer engineering student from Spain, Alicante. 
+                        I like building stuff and learning new things. I like C++ and low-level related stuff.
+                    </div>
+                    <div id = "about-me-2" class = "paragraph">
+                        Besides from tech, I enjoy skiing, swimming, playing the drums, camping and music. 
+                        If you are keen on any of these subjects I would love to chat! 
+                    </div>
+                </div>
             </div>
-            <ul id="navlist">
-                <li class="page-link"><a href="#welcome">Start</a></li>
-                <li class="page-link"><a href="#about-me">About Me</a></li>
-                <li class="page-link"><a href="#projects">Projects</a></li>
-                <li class="page-link"><a href="#socials">Contact</a></li>
-            </ul>
-        </nav>
-        <main>
-            <section id="welcome">
-                <div class="welcome-container">
-                    <h1>Welcome</h1>
+            <hr>
+            <div id="wrapper-socials">
+
+                <!-- Github -->
+                 <a href="https://github.com/NicolasSerranoGarcia" target="_blank" aria-label="GitHub" class = "icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="27" fill="currentColor">
+                    <path d="M12 .297a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61a3.18 3.18 0 0 0-1.33-1.74c-1.09-.75.08-.73.08-.73a2.52 2.52 0 0 1 1.84 1.24 2.55 2.55 0 0 0 3.48 1 2.55 2.55 0 0 1 .76-1.6c-2.67-.3-5.47-1.34-5.47-5.93a4.63 4.63 0 0 1 1.24-3.21 4.3 4.3 0 0 1 .12-3.17s1.01-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23a4.3 4.3 0 0 1 .12 3.17 4.63 4.63 0 0 1 1.24 3.21c0 4.6-2.81 5.63-5.48 5.93a2.86 2.86 0 0 1 .82 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .297Z"/>
+                    </svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/nicol%C3%A1s-serrano-garc%C3%ADa-1a6a09276/" target="_blank" aria-label="LinkedIn" class = "icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="28" height="28" fill="currentColor">
+                    <path d="M100.28 448H7.4V148.9h92.88ZM53.79 108.1C24.09 108.1 0 83.5 0 53.8A53.79 53.79 0 0 1 107.58 53.8c0 29.7-24.09 54.3-53.79 54.3ZM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.2-79.2-48.3 0-55.7 37.7-55.7 76.7V448H158.5V148.9h89V191h1.3c12.4-23.5 42.7-48.2 87.9-48.2 94 0 111.3 61.9 111.3 142.3V448Z"/>
+                    </svg>
+                </a>
+
+                <!-- DeskUp -->
+                <a href="https://github.com/NicolasSerranoGarcia/DeskUp" target="_blank" aria-label="DeskUp" class = "icon">
+                    <img id = "img-desk-up" src = "DeskUp-icon.png" viewBox="0 0 448 512" width="29" height="29" fill="currentColor"/>
+                </a>
                 </div>
-                <div class="description-container">
-                    <p>I'm Nicolas Serrano Garcia </p>
-                    <p>17 from Spain</p>
-                    <p>Full time active learner</p>
-                </div>
-            </section>
-            <section class="transition-1"></section>
-            <section id="about-me">
-                <h1 class="tracking-in-expand">Who Am I?</h1>
-                <div class="about-me-text">
-                    <p>I’m a young student with a clear objective: <strong>learning</strong>. I’m a C.E. undergraduate from the University of Alicante trying to get into the world of coding.  Passionate about <i>mathematics</i> and <i>data science</i>. Anxious about what the world can bring me. </p>
-                </div>
-            </section>
-            <section class="transition-2"></section>
-            <section id="projects">
-                <h1>My Projects</h1>
-                <div class="projects-container">
-                    <div class="project 1"><a href="" target="_blank"><img src="first-project.png" width="300" alt="a photo link to my first project, a music form"></a><h1>Music From</h1></div>
-                    <div class="project 2"><a href="" target="_blank"><img src="" alt="a photo link to my first project, a music form"></a><h1></h1></div>
-                    <div class="project 3"><a href="" target="_blank"><img src="" alt="a photo link to my first project, a music form"></a><h1></h1></div>
-                    <div class="project 4"><a href="" target="_blank"><img src="" alt="a photo link to my first project, a music form"></a><h1></h1></div>
-                    <div class="project 5"><a href="" target="_blank"><img src="" alt="a photo link to my first project, a music form"></a><h1></h1></div>
-                    <div class="project 6"><a href="" target="_blank"><img src="" alt="a photo link to my first project, a music form"></a><h1></h1></div>
-                </div>
-            </section>
-            <section class="transition-3"></section>
-            <section id="socials">
-                <div class="socials-container">
-                    <a href="https://www.instagram.com//nincitoo" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://twitter.com/ninciito" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/nicol%C3%A1s-serrano-garc%C3%ADa-1a6a09276/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/N1ckN4m3-w" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <p>Nincito © 2024</p>
-            <p>All rights reserved</p>
-        </footer>
+            </div>
+        </div>
     </body>
 </html>
