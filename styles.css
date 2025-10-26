@@ -1,140 +1,135 @@
-/*Global*/
-
+/* Global */
 *, ::before, ::after{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    /* border: 1px solid blue; */
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  /* border: 1px solid blue; */
 }
 
 html {
-    hanging-punctuation: first last;
-    background-color: #334155;
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  hanging-punctuation: first last;
+  background-color: #334155;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(15px, 1.2vw + 12px, 18px);
 }
 
 h1{
-    font-family: "Poppins";
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.03em;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  font-size: clamp(1.25rem, 4.5vw + 0.45rem, 2rem);
+  text-align: center;
 }
 
 body {
-    min-height: 100svh;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+  min-height: 100svh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 
-    /*We only have one item on the page, and it is on the center*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
 }
 
 img, picture, svg, video, canvas {
   display: block;
-  max-width: 100%;            /* se ajustan al contenedor */
-  height: auto;               /* mantiene proporción */
+  max-width: 100%;
+  height: auto;
 }
 
-input, button, textarea, select {
-  font: inherit;
-}
+input, button, textarea, select { font: inherit; }
+a, button { touch-action: manipulation; }
 
-a, button {
-  touch-action: manipulation;
-}
-
-a:hover{
-    color:rgb(230, 128, 3);
-}
+a:hover{ color:rgb(230, 128, 3); }
 
 @media (prefers-reduced-motion: no-preference) {
-    *{
-        scroll-behavior:smooth;
-    }
+  *{ scroll-behavior:smooth; }
 }
 
-/*Modifiers*/
-
-.rounded{
-    border-radius: 9999px;
-}
+/* Modifiers */
+.rounded{ border-radius: 9999px; }
 
 .paragraph{
-    text-align: center;
-    margin-bottom: 5px;
-    margin-bottom: 5px;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-wrap: pretty;
 }
 
-.icon{
-    color: white;
-}
+.icon{ color: white; }
 
-/*Main*/
+/* Main */
 
-#wrapper-base{
-    width: 60vw;
-    height: 510px;
-    display: flex;
-    max-width: 500px;
-    min-width: 450px;
-    flex-direction: column;
-    align-items:center;
-    justify-content: space-around;
-}
-
+#wrapper-base,
 #wrapper-main-body{
-    width: 60vw;
-    height: 400px;
-    /* border: 1px solid black; */
-    max-width: 500px;
-    min-width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: space-around;
-}
-
-#wrapper-main-body > *{
-    /* border: 1px solid red; */
+  width: min(100%, 500px);
+  padding-inline: 0.5rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-around;
+  gap: 0.75rem;
+  max-width: 500px;
 }
 
 #wrapper-photo{
-    width: 128px;
-    margin-bottom: 10px;
+  width: 128px;
+  margin-bottom: 10px;
 }
 
 #wrapper-about-me{
-    width: 100%;
-    min-width: 300px;
-    height: 400px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-inline: 0.25rem;
 }
 
 #wrapper-socials{
-    margin-top: 0px;
-    width: 140px;
-    height: 30px;
-    /* border: 1px solid green; */
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  margin-top: 0;
+  width: auto;
+  min-width: 0;
+  height: auto;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 hr {
   border: none;
   border-top: 2px solid #ffffff;
   border-radius: 999999px;
-  margin: 1.5rem 0.5rem;
+  margin: 1rem 0;
   width: 100%;
   max-width: 600px;
   opacity: 0.6;
+}
+
+@media (max-width: 420px) {
+  h1{
+    letter-spacing: 0.08em;
+  }
+  #wrapper-photo{ width: 112px; }
+}
+
+@media (min-width: 920px) {
+  #wrapper-base,
+  #wrapper-main-body{
+    gap: 1rem;
+  }
+  .paragraph { margin-bottom: 1rem; }
 }
