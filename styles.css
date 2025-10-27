@@ -1,9 +1,9 @@
 /* Global */
+
 *, ::before, ::after{
   box-sizing:border-box;
   margin:0;
   padding:0;
-  /* border: 1px solid blue; */
 }
 
 html {
@@ -46,13 +46,14 @@ img, picture, svg, video, canvas {
 input, button, textarea, select { font: inherit; }
 a, button { touch-action: manipulation; }
 
-a:hover{ color:rgb(230, 128, 3); }
+a:hover { color:l }
 
 @media (prefers-reduced-motion: no-preference) {
   *{ scroll-behavior:smooth; }
 }
 
 /* Modifiers */
+
 .rounded{ border-radius: 9999px; }
 
 .paragraph{
@@ -63,7 +64,28 @@ a:hover{ color:rgb(230, 128, 3); }
   text-wrap: pretty;
 }
 
+.orange{
+    color: rgb(230, 128, 3);
+}
+
 .icon{ color: white; }
+
+.icon:hover{
+   filter: brightness(0) saturate(100%) invert(56%) sepia(88%) saturate(2882%) hue-rotate(11deg) brightness(97%) contrast(98%);
+}
+
+.location-link:hover{
+  color: #939393;
+  border-bottom-color: rgba(255,255,255,0.6);
+}
+
+.location-link{
+    color: white;
+    text-decoration: none; 
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    transition: border-color 0.3s ease, color 0.3s ease;
+
+}
 
 /* Main */
 
@@ -107,6 +129,11 @@ a:hover{ color:rgb(230, 128, 3); }
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+#img-desk-up {
+    transition: filter 0.3s ease;
+    filter: brightness(0) invert(1);
 }
 
 hr {
