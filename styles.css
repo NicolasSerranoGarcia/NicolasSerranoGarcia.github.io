@@ -54,7 +54,9 @@ a:hover { color:l }
 
 /* Modifiers */
 
-.rounded{ border-radius: 9999px; }
+.rounded{ 
+  border-radius: 9999px; 
+}
 
 .paragraph{
   text-align: center;
@@ -68,10 +70,21 @@ a:hover { color:l }
     color: rgb(230, 128, 3);
 }
 
-.icon{ color: white; }
+.no-decoration{
+  text-decoration: none;
+}
+
+.underline{
+  border-bottom: 1px solid grey;
+}
+
+.icon{ 
+  color: white; 
+}
 
 .icon:hover{
-   filter: brightness(0) saturate(100%) invert(56%) sepia(88%) saturate(2882%) hue-rotate(11deg) brightness(97%) contrast(98%);
+  transition: filter 0.4s ease;
+  filter: brightness(0) saturate(100%) invert(56%) sepia(88%) saturate(2882%) hue-rotate(11deg) brightness(97%) contrast(98%);
 }
 
 .location-link:hover{
@@ -135,6 +148,10 @@ a:hover { color:l }
     transition: filter 0.3s ease;
     filter: brightness(0) invert(1);
 }
+
+/* #deskup > a{
+  color:inherit;
+} */
 
 hr {
   border: none;
