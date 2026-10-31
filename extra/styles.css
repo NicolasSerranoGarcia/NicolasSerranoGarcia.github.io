@@ -1,9 +1,11 @@
 :root {
-  --background: #514039;
-  --foreground: #f7f2eb;
-  --line: #aa9990;
-  --button: #665249;
-  --hover: #7c6153;
+  --background: #242220;
+  --foreground: #f5eee6;
+  --line: #514943;
+  --button: #332f2b;
+  --hover: #443a32;
+  --accent: #f2b38c;
+  --shadow: rgb(0 0 0 / 14%);
 }
 * { box-sizing: border-box; }
 html { background: var(--background); }
@@ -22,42 +24,56 @@ body {
 .content { width: 100%; max-width: 500px; text-align: center; }
 .avatar {
   display: block;
-  width: 112px;
-  height: 112px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 16px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center 39%;
 }
-h1 { margin: 0; font-size: clamp(22px, 4.5vw, 29px); font-weight: 400; letter-spacing: .035em; }
+h1 { margin: 0; font-size: clamp(21px, 3.5vw, 23px); font-weight: 400; letter-spacing: .035em; }
 .bio { max-width: 470px; margin: 16px auto 0; font-size: 15px; line-height: 1.65; }
 hr { border: 0; border-top: 1px solid var(--line); margin: 26px 0 24px; }
 .socials { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+.socials a[href*="letterboxd.com"] { --brand: #202830; --button-text: #ffffff; --icon-filter: brightness(0) invert(1); }
+.socials a[href*="github.com"] { --brand: #ffffff; }
+.socials a[href*="genius.com"] { --brand: #ffff64; }
+.socials a[href*="strava.com"] { --brand: #fc4c02; }
+.socials a[href*="steamcommunity.com"] { --brand: #171a21; --button-text: #ffffff; --icon-filter: brightness(0) invert(1); }
+.socials a[href*="goodreads.com"] { --brand: #f4f1ea; }
+.socials a[href*="myanimelist.net"] { --brand: #2e51a2; --button-text: #ffffff; --icon-filter: brightness(0) invert(1); }
+.socials a[href*="spotify.com"] { --brand: #1ed760; }
+.socials a[href*="soundcloud.com"] { --brand: #ff5500; }
 .socials a {
+  --accent: var(--brand, #f2b38c);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 7px;
+  flex-direction: row;
+  gap: 6px;
   min-width: 0;
-  min-height: 75px;
-  padding: 10px 5px;
-  color: var(--foreground);
-  background: var(--button);
-  border: 1px solid transparent;
-  border-radius: 6px;
+  min-height: 42px;
+  padding: 10px 8px;
+  color: var(--button-text, #0b0907);
+  background: color-mix(in srgb, var(--accent) 80%, var(--background));
+  border: 1px solid color-mix(in srgb, var(--accent) 80%, var(--background));
+  border-radius: 10px;
+  box-shadow: 0 2px 8px var(--shadow);
   text-decoration: none;
   font-size: 12px;
+  white-space: nowrap;
   transition: background-color .18s ease, border-color .18s ease;
 }
-.socials a:hover { background: var(--hover); border-color: var(--line); }
-.socials a:focus-visible { outline: 2px solid var(--foreground); outline-offset: 3px; }
-.socials img { width: 22px; height: 22px; object-fit: contain; filter: brightness(0) invert(1); }
+.socials a:active { background: color-mix(in srgb, var(--accent) 75%, var(--background)); }
+.socials a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.socials img { width: 18px; height: 18px; flex-shrink: 0; object-fit: contain; filter: var(--icon-filter, brightness(0)); }
 @media (max-width: 390px) {
   body { padding: 30px 15px; }
   .avatar { width: 104px; height: 104px; }
-  .socials { gap: 8px; }
-  .socials a { font-size: 11px; min-height: 71px; }
+  .socials { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .socials a { font-size: 11px; }
   .bio { font-size: 14px; }
 }
-@media (prefers-reduced-motion: reduce) { .socials a { transition: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .socials a { transition: none; }
+}
